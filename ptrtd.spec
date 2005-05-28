@@ -15,7 +15,12 @@ Requires(post,preun):	/sbin/chkconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Portable Transport Relay Translator Daemon (pTRTd) is a method of allowing IPv6 hosts to communicate with IPv4 hosts. It is a TRT as specified by RFC 3142, similar to the Faith package implemented by the KAME project. However, unlike Faith, it doesn't depend on special support in the kernel IPv6 stack, and thus should be fairly easy to port to most Unix-like operating systems.
+The portable Transport Relay Translator daemon (pTRTd) is a method of
+allowing IPv6 hosts to communicate with IPv4 hosts. It is a TRT as
+specified by RFC 3142, similar to the Faith package implemented by the
+KAME project. However, unlike Faith, it doesn't depend on special
+support in the kernel IPv6 stack, and thus should be fairly easy to
+port to most Unix-like operating systems.
 
 %prep
 %setup -q
