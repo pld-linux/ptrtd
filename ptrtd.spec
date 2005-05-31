@@ -1,4 +1,6 @@
+# TODO: unify preun/postun
 Summary:	Portable Transport-layer Relay Translator daemon
+Summary(pl):	Przeno¶ny demon TRT (Transport-layer Relay Translator)
 Name:		ptrtd
 Version:	0.5.2
 Release:	1
@@ -22,6 +24,14 @@ KAME project. However, unlike Faith, it doesn't depend on special
 support in the kernel IPv6 stack, and thus should be fairly easy to
 port to most Unix-like operating systems.
 
+%description -l pl
+Przeno¶ny demon Transport Relay Translator (pTRTd) to metoda
+umo¿liwienia hostom IPv6 komunikowania siê z hostami IPv4. Jest to TRT
+zgodne z RFC 3142, podobne do pakietu Faith zaimplementowanego przez
+projekt KAME. Jednak, w przeciwieñstwie do Faikt, nie polega na
+specjalnym wsparciu w stosie IPv6 w j±drze, przez co powinien byæ do¶æ
+³atwy w portowaniu na wiêkszo¶æ uniksowych systemów operacyjnych.
+
 %prep
 %setup -q
 
@@ -32,15 +42,13 @@ port to most Unix-like operating systems.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sbindir}
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/sysconfig
-install -d $RPM_BUILD_ROOT/etc/rc.d/init.d
+install -d $RPM_BUILD_ROOT{%{_sbindir},/etc/rc.d/init.d,/etc/sysconfig}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/init.d/ptrtd
-install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/sysconfig/ptrtd
+install %{SOURCE2} $RPM_BUILD_ROOT/etc/sysconfig/ptrtd
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -62,6 +70,6 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc README
-%config %{_sysconfdir}/sysconfig/ptrtd
-%attr(754,root,root) /etc/rc.d/init.d/*
 %attr(755,root,root) %{_sbindir}/*
+%attr(754,root,root) /etc/rc.d/init.d/*
+%config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/ptrtd
