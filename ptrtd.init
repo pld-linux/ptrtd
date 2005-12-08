@@ -5,7 +5,7 @@
 # chkconfig:	345 90 25
 #
 # description:	the TRT daemon translates IPv6 connections to IPv4.
-#		
+#
 # pidfile:	/var/run/ptrtd.pid
 # config:	/etc/ptrtd.conf
 
