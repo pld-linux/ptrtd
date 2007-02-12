@@ -1,6 +1,6 @@
 # TODO: unify preun/postun
 Summary:	Portable Transport-layer Relay Translator daemon
-Summary(pl):	Przeno¶ny demon TRT (Transport-layer Relay Translator)
+Summary(pl.UTF-8):   PrzenoÅ›ny demon TRT (Transport-layer Relay Translator)
 Name:		ptrtd
 Version:	0.5.2
 Release:	1
@@ -24,13 +24,13 @@ KAME project. However, unlike Faith, it doesn't depend on special
 support in the kernel IPv6 stack, and thus should be fairly easy to
 port to most Unix-like operating systems.
 
-%description -l pl
-Przeno¶ny demon Transport Relay Translator (pTRTd) to metoda
-umo¿liwienia hostom IPv6 komunikowania siê z hostami IPv4. Jest to TRT
+%description -l pl.UTF-8
+PrzenoÅ›ny demon Transport Relay Translator (pTRTd) to metoda
+umoÅ¼liwienia hostom IPv6 komunikowania siÄ™ z hostami IPv4. Jest to TRT
 zgodne z RFC 3142, podobne do pakietu Faith zaimplementowanego przez
-projekt KAME. Jednak, w przeciwieñstwie do Faikt, nie polega na
-specjalnym wsparciu w stosie IPv6 w j±drze, przez co powinien byæ do¶æ
-³atwy w portowaniu na wiêkszo¶æ uniksowych systemów operacyjnych.
+projekt KAME. Jednak, w przeciwieÅ„stwie do Faikt, nie polega na
+specjalnym wsparciu w stosie IPv6 w jÄ…drze, przez co powinien byÄ‡ doÅ›Ä‡
+Å‚atwy w portowaniu na wiÄ™kszoÅ›Ä‡ uniksowych systemÃ³w operacyjnych.
 
 %prep
 %setup -q
