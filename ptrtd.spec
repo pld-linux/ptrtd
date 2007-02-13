@@ -1,6 +1,6 @@
 # TODO: unify preun/postun
 Summary:	Portable Transport-layer Relay Translator daemon
-Summary(pl.UTF-8):   Przenośny demon TRT (Transport-layer Relay Translator)
+Summary(pl.UTF-8):	Przenośny demon TRT (Transport-layer Relay Translator)
 Name:		ptrtd
 Version:	0.5.2
 Release:	1
