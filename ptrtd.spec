@@ -28,7 +28,7 @@ port to most Unix-like operating systems.
 Przenośny demon Transport Relay Translator (pTRTd) to metoda
 umożliwienia hostom IPv6 komunikowania się z hostami IPv4. Jest to TRT
 zgodne z RFC 3142, podobne do pakietu Faith zaimplementowanego przez
-projekt KAME. Jednak, w przeciwieństwie do Faikt, nie polega na
+projekt KAME. Jednak, w przeciwieństwie do Faith, nie polega na
 specjalnym wsparciu w stosie IPv6 w jądrze, przez co powinien być dość
 łatwy w portowaniu na większość uniksowych systemów operacyjnych.
 
